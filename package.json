@@ -2,7 +2,7 @@
   "name": "ytube-be",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "server": "nodemon server.js",
     "fix": "eslint --fix"
