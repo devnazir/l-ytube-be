@@ -10,6 +10,5 @@ module.exports = {
       useCreateIndex: true,
     },
   },
-  PORT: 3004,
   secret: process.env.JWT_SECRET,
 };

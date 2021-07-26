@@ -4,6 +4,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const config = require("./config");
 
+const PORT = 3004;
 const app = express();
 
 app.use(cors());
@@ -20,8 +21,8 @@ app.get("/", ({ res }) => {
 
 app.use("/api", require("./routes/api"));
 
-app.listen(config.PORT || process.env.PORT, () => {
-  console.log(`server is running at port ${config.PORT || process.env.PORT}`);
+app.listen(PORT || process.env.PORT, () => {
+  console.log(`server is running at port ${PORT || process.env.PORT}`);
 });
 
 mongoose
