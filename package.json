@@ -2,9 +2,9 @@
   "name": "ytube-be",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "server": "nodemon server.js",
+    "server": "nodemon app.js",
     "fix": "eslint --fix"
   },
   "keywords": [],

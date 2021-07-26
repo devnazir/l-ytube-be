@@ -21,7 +21,7 @@ app.get("/", ({ res }) => {
 
 app.use("/api", require("./routes/api"));
 
-app.listen(PORT || process.env.PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`server is running at port ${PORT || process.env.PORT}`);
 });
 
