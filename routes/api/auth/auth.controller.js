@@ -1,5 +1,3 @@
-/* eslint-disable no-underscore-dangle */
-
 const jwt = require("jsonwebtoken");
 const { v4: uuidv4 } = require("uuid");
 const User = require("../../../models/user");
@@ -23,7 +21,7 @@ exports.register = async (req, res) => {
   }
 
   const user = new User({
-    _id: uuidv4(),
+    userid: uuidv4(),
     username: username?.trim(),
     password: encryptPassword(password),
   });
@@ -49,7 +47,7 @@ exports.login = async (req, res) => {
     } else if (checkUser.verify(password)) {
       const token = jwt.sign(
         {
-          _id: checkUser._id,
+          userid: checkUser.userid,
           username: checkUser.username,
           admin: checkUser.admin,
         },

@@ -9,7 +9,7 @@ exports.add_video = (req, res) => {
   const { title, description, publisher } = req.body;
 
   const video = new Video({
-    _id: uuidv4(),
+    video_id: uuidv4(),
     title: title?.trim(),
     description: description?.trim(),
     publisher: publisher?.trim(),
