@@ -26,7 +26,13 @@ const Video = new Schema({
       message: "{VALUE} is not supported",
     },
   },
+  likes: { type: Array, default: [] },
+  dislikes: { type: Array, default: [] },
   date: { type: Date, default: Date.now() },
 });
+
+Video.statics.getCategories = function () {
+  return Video.tree.category.enum.values;
+};
 
 module.exports = mongoose.model("Video", Video);
